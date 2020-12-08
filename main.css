@@ -1,0 +1,198 @@
+* {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    -ms-overflow-style: none;  /* Internet Explorer 10+ */
+    scrollbar-width: none;
+    
+}
+
+html, body {
+    height: 97%;
+}
+
+a {
+   color: black;     
+}
+
+::-webkit-scrollbar { 
+    display: none; 
+}
+
+
+#main_content{
+    margin: 15px;
+    display: grid;
+    grid-template-columns: repeat(3, 33%);
+    grid-template-areas: 
+    "header header header"
+    "projects misc about"
+    "footer footer footer"
+}
+/*TITLE*/
+
+#header {
+    grid-area: header;
+    margin: 20px 0px 40px 0px;
+}
+
+
+@keyframes title-colors {
+    0% {color:#3772ff}
+    33% {color:#df2935}
+    66% {color:#fdca40}
+    100% {color:#3772ff}
+}
+
+.title {
+    /*text-align: center;*/
+    font-size: 4em;
+    
+}
+.title a:link, a:visited, a:active {
+    color: black;
+    text-decoration: none;
+}
+.title-word:hover {
+    animation-name: title-colors;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+
+}
+
+.title-word.Speth {
+    /*color:#df2935;*/
+    animation-delay: -1s;
+}
+
+.title-word.McCrary {
+    /*color:#fdca40;*/
+    animation-delay: -2s;
+}
+
+.title-word.Caidan {
+    color:#3772ff;
+    animation-delay: -3.5s;
+}
+
+.title-word.Blog {
+    color:#df2935;
+    animation-delay: -1s;
+}
+
+/*PROJECTS*/
+
+#projects {
+    grid-area: projects;
+/*  display: grid;
+    margin: 15px;
+    grid-row-gap: 15px;
+    grid-column-gap: 15px;
+    width: 100%;
+    grid-template-columns: repeat(auto-fit, 300px);*/
+}
+
+#projects div {
+    margin-bottom: 20px;
+}
+
+#current_projects div{
+    width: 80%;
+}
+
+#current_projects div{
+    margin: 15px 0px 15px 0px;
+}
+
+#past_projects{
+    width: 80%;
+}
+#past_projects div{
+    margin: 15px 0px 15px 0px;
+}
+
+.project_thumbnail {
+    min-height: 200px;
+    border-style: solid;
+    border-color: black;
+    border-width: 5px;
+    border-radius: 10px;
+    background-color: salmon;
+}
+.project_thumbnail h3 {
+    text-align: center;
+    padding-top: 25%
+}
+
+/* Misc */
+#misc {
+    grid-area: misc;
+}
+
+#misc div {
+    margin-top: 15px;
+}
+
+#misc div div{
+    /*width: 75%;*/
+}
+
+.publisher {
+    font-style: italic;
+    /*color: grey;*/
+}
+
+/*Contact/About*/
+#contact {
+    grid-area: about;
+}
+#contact p {
+    margin-top: 15px;
+}
+
+#contact a {
+    color: grey;
+}
+
+/*BLOG*/
+
+#main_content_blog {
+    height: 100%;
+    margin: 15px;
+    display: grid;
+    grid-column-gap: 15px;
+    grid-template-columns: 65% 30%;
+    grid-template-rows: 20% 80%;
+    grid-template-areas: 
+    "header header"
+    "active_post other_posts"
+}
+
+.post {
+    /*width: 30%;*/
+    margin-bottom: 15px;
+}
+
+.post h2 {
+    margin-bottom: 15px;
+}
+
+#other_posts {
+    padding-left: 15px;
+    grid-area: other_posts;
+    border-left-style: dotted;
+    border-left-width: 1px;
+    height: 100%;
+    overflow: scroll; 
+}
+
+#active_post {
+    grid-area: active_post;
+    height: 100%;
+    overflow: scroll;   
+}
+
+#all_posts {
+    grid-area: active_post;
+    height: 100%;
+    overflow: scroll;   
+}
