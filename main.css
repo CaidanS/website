@@ -110,6 +110,14 @@ a {
     margin: 15px 0px 15px 0px;
 }
 
+#bites{
+    width: 80%;
+}
+
+#bites div {
+    margin: 15px 0px 15px 0px;
+}
+
 .project_thumbnail {
     min-height: 200px;
     border-style: solid;
