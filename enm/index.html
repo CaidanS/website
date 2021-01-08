@@ -1,0 +1,77 @@
+<!doctype HTML>
+<head>
+    <script language="javascript" type="text/javascript" src="libs/p5.js"></script>
+    <script language="javascript" type="text/javascript" src="libs/rancol.js"></script>
+    <script language="javascript" type="text/javascript" src="main.js"></script>
+</head>
+<body style="text-align:center; font-family:Arial, Helvetica, sans-serif">
+    <div style="text-align:center; margin:25px 75px"> 
+        <table id="controls">
+            <h1 style="text-align:center;"> ENM Artistic Project </h1>
+                <tr>
+                    <td style="text-align:left; width:45%;">
+                        
+                        <p> Each dot repersents a member of the class of 2020. Based on survey information, relationships are predicted, and modelled using vectors. The simulation can be controlled using the sliders and check boxes on the right. This simulation shows the connections between individuals in the class. </p>
+                        <ul>
+                            <li> MAX MAG: The maximum magnitude of vectors acting attractive force (0 to 50) </li>
+                            <li> OFFSET: The offset for relationship's base values (-10 to 10) </li>
+                            <li> Min/Max: Connect people to each other person with whom they spend the least/most time </li>
+                            <li> Mutural Min/Max: Same as above, but connections must go both ways </li>
+                            <li> All: Shows all connections
+                    <td style="width:40%; text-align:left;">
+                        <table  style="background-color:lightgrey">
+                            <tr>
+                                <td>
+                                    MAX MAG: 
+                                </td>
+                                <td>
+                                    <div>
+                                        <input type="range" min="0" max="50" value="3" 
+                                            style="display:inline-block;width:150px;" id="per-slider">
+                                    </div>
+                                </td>
+                                <td>
+                                    <form style="display:inline-block">
+                                            <input id="max" type="checkbox"> Max <br>
+                                    </form>
+                                </td>
+                                <td>
+                                    <form style="display:inline-block">
+                                            <input id="mutural-max" type="checkbox"> Mutural Max<br>
+                                    </form>
+                                </td>
+                                <td>
+                                    <form style="display:inline-block">
+                                            <input id="all" type="checkbox"> All<br>
+                                    </form>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    OFFSET:
+                                </td>
+                                <td>
+                                    <div>
+                                        <input type="range" min="-10" max="10" value="-4" oninput="offset_val = int(document.getElementById('offset-slider').value);"
+                                            style="display:inline-block;width:150px;" id="offset-slider">
+                                    </div>
+                                </td>
+                                <td>
+                                    <form style="display:inline-block">
+                                            <input id="min" type="checkbox"> Min <br>
+                                    </form>
+                                </td>
+                                <td>
+                                    <form style="display:inline-block">
+                                            <input id="mutural-min" type="checkbox"> Mutural Min <br>
+                                    </form>
+                                </td>
+                            </tr>
+                            
+                        </table>
+                    </td>
+                </tr>
+            </table>
+        
+    </div>
+</body>
