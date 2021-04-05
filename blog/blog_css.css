@@ -1,0 +1,51 @@
+#main_content_blog {
+    height: 100%;
+    margin: 15px;
+    display: grid;
+    grid-column-gap: 15px;
+    grid-template-columns: 80% 15%;
+    grid-template-rows: 20% 80%;
+    grid-template-areas:
+        "header header"
+        "active_post other_posts"
+}
+
+.post {
+    margin-bottom: 15px;
+}
+
+.post h2 {
+    margin-bottom: 15px;
+}
+
+#other_posts {
+    padding-left: 15px;
+    grid-area: other_posts;
+    border-left-style: dotted;
+    border-left-width: 1px;
+    height: 100%;
+    overflow: scroll;
+}
+
+#active_post {
+    grid-area: active_post;
+    height: 100%;
+    overflow: scroll;
+    width: 70%;
+    display: block;  
+    margin-left: auto;  
+    margin-right: auto;  
+}
+
+#all_posts {
+    grid-area: active_post;
+    height: 100%;
+    overflow: scroll;
+}
+
+img {
+    width: 80%;
+    display: block;  
+    margin-left: auto;  
+    margin-right: auto;  
+}
