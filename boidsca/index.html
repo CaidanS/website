@@ -1,0 +1,34 @@
+<!doctype HTML>
+<head>
+    <script language="javascript" type="text/javascript" src="p5.js"></script>
+    <script language="javascript" type="text/javascript" src="main.js"></script>
+    <link rel="stylesheet" type="text/css" href="/main.css">
+    <link rel="stylesheet" type="text/css" href="boidscss.css">
+    
+</head>
+<body>
+    <h1 class='title'> <span class="title-word Caidan">Cellular Automata Test</span> </h1>
+    <h2> Using activation functions on continuous totalistic cellular automata</h2><br>
+    <table>
+        <tr>
+            <td style="width: 50%; vertical-align: top; padding-right: 50px;">
+                A quick project to teach myself about activation functions/relearning p5.js. 
+                On each frame, the sum of each cells neighborhood is calculated, and then passed into an activation function. 
+                I used hyperbolic tangent and sigmoid, but theoretically any function is usable. 
+                I find that using these sorts of functions (non-linear) provides a much more interesting results.
+                The cells are rendered as squares with a greyscale value equal to 255 times their value, 
+                which lies between 0 and 1 from the activation function. <br> <br>
+                Other interesting ideas: integration with boid algorithms, using fourier transforms to approximate traditional (discrete) CA rulesets.<br><br>
+                Helpful links: <a href="http://rectangleworld.com/blog/archives/587">[A Colorful Cellular Automaton in HTML5 Canvas
+                    ]</a> <a href="">[Extension of cellular automata by introducing an algorithm
+                    of recursive estimation of neighbors]</a>
+            </td>
+            <td style="text-align: right;">
+                <div id="canvas_container"></div>
+                <div style="font-style: italic;">sigmoid function</div>
+            </td>
+        </tr>
+    </table>
+    
+    
+</body>

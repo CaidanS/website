@@ -1,5 +1,8 @@
 * {
-    font-family: Arial, Helvetica, sans-serif;
+    /* font-family: 'Space Grotesk', sans-serif; */
+    /* font-family: 'Oi', cursive;     */
+    /* font-family: 'Pirata One', cursive; */
+    font-family: -apple-system, system-ui, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
     margin: 0;
     -ms-overflow-style: none;
     /* Internet Explorer 10+ */
@@ -56,18 +59,38 @@ a {
 
 
 #header {
+    
     grid-area: header;
     margin: 20px 0px 40px 0px;
 }
 
+@-webkit-keyframes Animation {
+    0%{background-position:10% 0%}
+    50%{background-position:91% 100%}
+    100%{background-position:10% 0%}
+}
+@-moz-keyframes Animation {
+    0%{background-position:10% 0%}
+    50%{background-position:91% 100%}
+    100%{background-position:10% 0%}
+}
+@keyframes Animation { 
+    0%{background-position:10% 0%}
+    50%{background-position:91% 100%}
+    100%{background-position:10% 0%}
+}
 
 @keyframes title-colors {
     0% {
-        color: #3772ff
+        background: linear-gradient(to right bottom, #df2935 0%, #3772ff 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
     }
 
     33% {
-        color: #df2935
+        background: linear-gradient(to right bottom, #df2935 0%, #fdca40 100%);
+	    -webkit-background-clip: text;
+	    -webkit-text-fill-color: transparent;
     }
 
     66% {
@@ -80,10 +103,12 @@ a {
 }
 
 .title {
+    /* font-family: 'Oi', cursive; */
     /*text-align: center;*/
     font-size: 3rem;
 
 }
+
 
 .title a:link,
 a:visited,
@@ -93,7 +118,7 @@ a:active {
 }
 
 .title-word:hover {
-    animation-name: title-colors;
+    animation-name: Animation;
     animation-duration: 4s;
     animation-iteration-count: infinite;
 
@@ -110,13 +135,29 @@ a:active {
 }
 
 .title-word.Caidan {
+    background: linear-gradient(to right bottom, #fdca40 0%, #df2935 50%, #3772ff 100%);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+    background-size: 200% 200%;
+
+    -webkit-animation: Animation 50s ease infinite;
+    -moz-animation: Animation 50s ease infinite;
+    animation: Animation 50s ease infinite;
+
     color: #3772ff;
     animation-delay: -3.5s;
 }
 
 .title-word.Blog {
-    color: #df2935;
-    animation-delay: -1s;
+    background: linear-gradient(to right bottom, #df2935 0%, #3772ff 100%);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+    background-size: 200% 200%;
+    animation-delay: -3.5s;
+}
+
+h2 {
+    margin-bottom: 0.5rem;
 }
 
 /*PROJECTS*/
@@ -147,8 +188,6 @@ a:active {
 #past_projects div {
     margin: 15px 0px 15px 0px;
 }
-
-
 
 #bites div {
     margin: 15px 0px 15px 0px;

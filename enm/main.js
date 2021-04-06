@@ -29,12 +29,13 @@ arr = [1]
 
 var point_rad = 50;
 var border = point_rad*0.5;
-var offset_val = 0;
-var rheight = innerHeight*(.5);
-var rwidth = innerWidth-150;
+var offset_val = -5;
+var rheight = innerHeight - 250;
+var rwidth = innerWidth*(.35);
 
 function setup(){
-    createCanvas(rwidth,rheight);
+    let renderer = createCanvas(rwidth,rheight);
+    renderer.parent("canvas_container");
     background(200);
     noStroke();
     for(i=0;i < pconnections.length; i++){
