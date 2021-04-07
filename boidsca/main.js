@@ -29,6 +29,7 @@ function setup() {
         new_grid[i] = grid[i];
     }
     noStroke();
+    colorMode(HSL);
     // noLoop();
     // frameRate(1);
 }
@@ -78,7 +79,7 @@ function draw() {
         // new_grid[i] = sum/(neighbor_points.length);
 
         // new_grid[i] = sum
-        fill(sum * 255);
+        fill(((new_grid[i] * 360)/4) + 240, 87, (sum/8) * 25 + 50);
         // fill(51);
         if (flip % offset == 0){
             rect(x_point * spacer, y_point * spacer + spacer, spacer , spacer);           
