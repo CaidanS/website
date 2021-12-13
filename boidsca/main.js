@@ -69,7 +69,9 @@ function draw() {
         // mouse_off = (mouseY / innerHeight) * mouse_weight;
         s_sig = sum;
         
-        // sigmoid
+        // SIGMOID ACTIVATION FUNCTION (COULD BE ANYTHING, THEORETICALLY)
+        // non-linear, strictly increasing functions provide much more interesting results
+        // THIS is the area to introduce ml/ai if one wanted to
         new_grid[i] = parseFloat(1/(Math.exp(-s_sig+neighbor_offset_for_activation)+1).toFixed(3));
         
         // tanh
