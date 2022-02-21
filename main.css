@@ -43,6 +43,7 @@ a {
         font-size: 4rem;
     }
     #main_content {
+        margin: 50px;
         grid-template-columns: repeat(3, 33%);
         grid-template-areas:
             "header header header"
