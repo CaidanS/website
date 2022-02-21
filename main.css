@@ -44,6 +44,7 @@ a {
     }
     #main_content {
         margin: 50px;
+        margin-top: 10px;
         grid-template-columns: repeat(3, 33%);
         grid-template-areas:
             "header header header"
@@ -107,7 +108,6 @@ a {
     /* font-family: 'Oi', cursive; */
     /*text-align: center;*/
     font-size: 3rem;
-
 }
 
 
