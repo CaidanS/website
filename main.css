@@ -267,3 +267,46 @@ hr {
     border-bottom: 1px solid rgba(0, 0, 0, 0.2);
 
 }
+
+
+@keyframes overlay-in {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  
+  @keyframes overlay-out {
+    0% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 0;
+    }
+  }
+  
+  .title-word{
+    vertical-align: bottom;
+  }
+  
+  .thidden {
+    /* opacity: 0; */
+    overflow: hidden;
+    display: inline-block;
+    transition: max-width .8s ease-in-out 
+  }
+  
+  .title:hover .thidden {
+    max-width: 200px;
+    animation: overlay-in .3s ease-in-out .4s;
+    animation-fill-mode: forwards;
+  }
+  
+  .title .thidden {
+    max-width: 0px;
+    opacity: 0;
+    animation: overlay-out .3s ease-in-out;
+  }
+  
