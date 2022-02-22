@@ -3,15 +3,24 @@
     <script language="javascript" type="text/javascript" src="libs/p5.js"></script>
     <script language="javascript" type="text/javascript" src="libs/rancol.js"></script>    
     <link rel="stylesheet" type="text/css" href="/main.css">
+    <link rel="stylesheet" type="text/css" href="enm.css">
 </head>
-<body style="margin: 50px;">
-    <div> 
-        <table id="controls"></table>
-            <h1 class='title'> <span class="title-word Caidan">ENM Artistic Project</span> </h1> 
-            <h2>Modeling social dynamics with electrostatics equations</h2><br>
-            <table>
-                <tr style="vertical-align: top; padding-left: 50px">
-                    <td style="text-align:left; width:45%;">                        
+<body>
+    <div id="main_content">
+        <div id="header">
+            <h1 class='title'>
+                <a href="/">
+                    <span class="title-word Caidan">C</span><span class="title-word thidden">aidan&nbsp;</span><span
+                        class="title-word">S</span><span class="title-word thidden">peth-</span><span
+                        class="title-word">M</span><span class="title-word thidden">cCrary</span>
+                </a>/ <span class="title-word">ENM Artistic Project</span>
+            </h1>
+        </div>
+        <div class="inset_wrapper">
+            <h2> Modeling social dynamics with electrostatics equations</h2><br>
+            <table style="margin: 0px; padding: 0px;">
+                <tr style="vertical-align: top;">
+                    <td style="text-align:left; width:45%">                        
                         <p> Each dot repersents a member of the class of 2020. Based on survey information, relationships are predicted, and modelled using vectors. The simulation can be controlled using the sliders and check boxes on the right. This simulation shows the connections between individuals in the class. </p> <br>
                         
                             <strong> MAX MAG: </strong> The maximum magnitude of vectors acting attractive force (0 to 50)  <br><br>
@@ -20,12 +29,8 @@
                             <strong> Mutural Min/Max: </strong>Same as above, but connections must go both ways  <br><br>
                             <strong> All: </strong>Shows all connections <br><br>
                         
-                        <br> <br>
-                        
-                    </td>
-                    <td style="padding-left: 100px">
-                        <div id="canvas_container"></div>
-                        <table style="margin-top: 10px;">
+                        <br> 
+                        <table style="margin-top: 10px; padding-left: 0px;">
                             <tr>
                                 <td>
                                     MAX MAG: 
@@ -76,9 +81,12 @@
                             
                         </table>
                     </td>
+                    <td style="padding-left: 100px">
+                        <div id="canvas_container"></div>                        
+                    </td>
                 </tr>                                
             </table>
-        
+        </div>
     </div>
     <script language="javascript" type="text/javascript" src="main.js"></script>
 </body>

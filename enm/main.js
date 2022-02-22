@@ -30,7 +30,7 @@ arr = [1]
 var point_rad = 50;
 var border = point_rad*0.5;
 var offset_val = -5;
-var rheight = innerHeight - 250;
+var rheight = innerHeight - 300;
 var rwidth = innerWidth*(.35);
 
 function setup(){

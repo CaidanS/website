@@ -10,10 +10,10 @@
 
 }
 
-html,
+/* html,
 body {
     height: 97%;
-}
+} */
 
 a {
     color: black;
@@ -28,15 +28,28 @@ a {
     font-size: 1rem;
     margin: 15px;
     display: grid;
-    grid-template-columns: repeat(4, calc(auto + 30px));
+    grid-template-columns: 100%;
     grid-template-areas:
         "header"
-        "about"
-        "projects"
-        "misc"
+        "inset_wrapper"
 }
 
-/*TITLE*/
+#inset_wrapper {
+    grid-area: inset_wrapper
+}
+
+#inset_content {
+    /* grid-area: inset_wrapper; */
+    display: grid;
+    grid-template-columns: repeat(4, calc(auto + 30px));
+    grid-template-areas: 
+        "about"
+        "projects"
+        "bites"
+        "misc"
+        "footer"
+}
+
 
 @media (min-width: 885px) {
     #title {
@@ -44,26 +57,35 @@ a {
     }
     #main_content {
         margin: 50px;
-        margin-top: 10px;
+        margin-top: 30px;
+        grid-template-columns: 100%;
+        grid-template-areas:
+            "header header"
+            "inset_content"
+    }
+    #inset_content{
+        /* grid-area: inset_wrapper; */
+        display: grid;
         grid-template-columns: repeat(3, 33%);
         grid-template-areas:
             "header header header"
             "projects misc about"
     }
-
     #past_projects {
         width: 80%;
     }
     #bites {
-    width: 80%;
-}
+        width: 80%;
+    }
+    #current_projects div {
+        width: 80%;
+    }
 }
 
 
 #header {
-    
     grid-area: header;
-    margin: 20px 0px 40px 0px;
+    margin-bottom: 40px;
 }
 
 @-webkit-keyframes Animation {
@@ -178,10 +200,6 @@ h2 {
 }
 
 #current_projects div {
-    /* width: 80%; */
-}
-
-#current_projects div {
     margin: 15px 0px 15px 0px;
 }
 
@@ -212,11 +230,11 @@ h2 {
 #misc {
     grid-area: misc;
     margin-bottom: 15px;
-
 }
 
 #misc div {
     margin-top: 15px;
+    width: 80%;
 }
 
 #misc div div {
@@ -240,4 +258,12 @@ h2 {
 
 #contact a {
     color: grey;
+}
+
+hr {
+    border: 0;
+    height: 0;
+    border-top: 1px solid rgba(0, 0, 0, 0.2);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+
 }

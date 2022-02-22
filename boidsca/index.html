@@ -1,33 +1,48 @@
 <!doctype HTML>
+
 <head>
     <script language="javascript" type="text/javascript" src="p5.js"></script>
     <script language="javascript" type="text/javascript" src="main.js"></script>
     <link rel="stylesheet" type="text/css" href="/main.css">
     <link rel="stylesheet" type="text/css" href="boidscss.css">
-    
+
 </head>
+
 <body>
-    <h1 class='title'> <span class="title-word Caidan">Cellular Automata Test</span> </h1>
-    <h2> Using activation functions on continuous totalistic cellular automata</h2><br>
-    <table>
-        <tr>
-            <td style="width: 50%; vertical-align: top; padding-right: 50px;">
-                A quick project to teach myself about activation functions/relearning p5.js. 
-                On each frame, the sum of each cells neighborhood is calculated, and then passed into an activation function. 
-                I used hyperbolic tangent and sigmoid, but theoretically any function is usable.             
-                I found that  non-linear, strictly increasing functions provide much more interesting results.
-                The cells are rendered as squares with HSL values mapped from their own values. <br> <br>
-                Other interesting ideas: integration with boid algorithms, using fourier transforms to approximate traditional (discrete) CA rulesets.<br><br>
-                Helpful links: <a href="http://rectangleworld.com/blog/archives/587">[A Colorful Cellular Automaton in HTML5 Canvas
-                    ]</a> <a href="https://arxiv.org/pdf/1512.05199.pdf">[Extension of cellular automata by introducing an algorithm
-                    of recursive estimation of neighbors]</a>
-            </td>
-            <td style="text-align: right;">
-                <div id="canvas_container"></div>
-                <div style="font-style: italic;">sigmoid function</div>
-            </td>
-        </tr>
-    </table>
-    
-    
+    <div id="main_content">
+        <div id="header">
+            <h1 class='title'>
+                <a href="/">
+                    <span class="title-word Caidan">C</span><span class="title-word thidden">aidan&nbsp;</span><span
+                        class="title-word">S</span><span class="title-word thidden">peth-</span><span
+                        class="title-word">M</span><span class="title-word thidden">cCrary</span>
+                </a>/ <span class="title-word">Cellular Automata Test</span>
+            </h1>
+        </div>
+        <div class="inset_wrapper">
+            <h2> Using activation functions on continuous totalistic cellular automata</h2><br>
+            <table>
+                <tr>
+                    <td style="width: 50%; vertical-align: top; padding-right: 50px;">
+                        A quick project to teach myself about activation functions/relearning p5.js.
+                        On each frame, the sum of each cells neighborhood is calculated, and then passed into an
+                        activation function.
+                        I used hyperbolic tangent and sigmoid, but theoretically any function is usable.
+                        I found that non-linear, strictly increasing functions provide much more interesting results.
+                        The cells are rendered as squares with HSL values mapped from their own values. <br> <br>
+                        Other interesting ideas: integration with boid algorithms, using fourier transforms to
+                        approximate traditional (discrete) CA rulesets.<br><br>
+                        Helpful links: <a href="http://rectangleworld.com/blog/archives/587">[A Colorful Cellular
+                            Automaton in HTML5 Canvas
+                            ]</a> <a href="https://arxiv.org/pdf/1512.05199.pdf">[Extension of cellular automata by
+                            introducing an algorithm
+                            of recursive estimation of neighbors]</a>
+                    </td>
+                    <td style="text-align: right;">
+                        <div id="canvas_container"></div>
+                        <div style="font-style: italic;">sigmoid function</div>
+                    </td>
+                </tr>
+            </table>
+        </div>
 </body>
