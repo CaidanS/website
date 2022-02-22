@@ -1,0 +1,119 @@
+let spacer = 10;
+let grid_dims = {rows:100, cols:100};
+
+// neighbor_points relative to active points in the form [x_offset, y_offset]
+let neighbor_points = [
+    [-1, 1],    [0, 1],     [1, 1],
+    [-1, 0],    [0, 0],      [1, 0], 
+    [-1, -1],   [0, -1],    [1, -1]
+];
+
+const mouse_weight = 1;
+
+const neighbor_offset_for_activation = (neighbor_points.length + mouse_weight)/2
+
+
+let grid = new Array(grid_dims.rows * grid_dims.cols).fill(0)
+
+let new_grid = new Array(grid_dims.rows * grid_dims.cols).fill(0)
+
+console.log(grid)
+
+let flip = 0;
+let offset = 1;
+
+function setup() {
+    let renderer = createCanvas(2000, 2000);
+    renderer.parent("canvas_container");
+    spacer = 20;
+    for (var i = 0; i < grid.length; i++) {
+        grid[i] = Math.random();
+        new_grid[i] = grid[i];
+    }
+    noStroke();
+    colorMode(HSL);
+    // noLoop();
+    // frameRate(1);
+}
+
+function draw() {
+    if (flip % offset == 0){
+        // background(255); 
+        clear();
+    }
+
+    for (let i = 0; i < grid.length; i += 1) {
+        // new_grid[i].value = 0;
+
+        x_point = (i % grid_dims.cols)
+        y_point = floor(i/grid_dims.rows)        
+        let sum = 0;  
+
+        for (j = 0; j < neighbor_points.length; j += 1) {            
+            let x_neighbor = x_point + neighbor_points[j][0];
+            let y_neighbor = y_point + neighbor_points[j][1];                                    
+            if (0 == (x_neighbor >= 0 && y_neighbor >= 0 && x_neighbor < grid_dims.cols && y_neighbor < grid_dims.rows)){
+               if (x_neighbor < 0){
+                x_neighbor = grid_dims.cols;
+               }
+               if (y_neighbor < 0){
+                y_neighbor = grid_dims.rows;
+               }
+               if (x_neighbor >= grid_dims.cols){
+                x_neighbor = 0;
+               }
+               if (y_neighbor >= grid_dims.rows){
+                y_neighbor = 0;
+               }
+            }              
+            sum += grid[x_neighbor + y_neighbor * grid_dims.cols];
+        }
+
+        mouse_off = (innerWidth-2*mouseX)/(2*innerWidth) * mouse_weight;
+        
+        const neighbor_offset_for_activation = (neighbor_points.length + mouse_off**3)/2
+
+        s_sig = sum;
+        
+        // SIGMOID ACTIVATION FUNCTION (COULD BE ANYTHING, THEORETICALLY)
+        // non-linear, strictly increasing functions provide much more interesting results
+        // THIS is the area to introduce ml/ai if one wanted to
+        // new_grid[i] = parseFloat(1/(Math.exp(-s_sig+neighbor_offset_for_activation)+1).toFixed(3));
+        
+        // tanh
+        new_grid[i] = parseFloat((Math.tanh(s_sig-neighbor_offset_for_activation)+1).toFixed(3))/2;
+
+        // average
+        // new_grid[i] = sum/(neighbor_points.length);
+
+        // new_grid[i] = sum
+        p_x = i % grid_dims.cols
+        p_y = i / grid_dims.cols
+        fill(((new_grid[i] * 360)/4) + 240, 40, (sum/8) * 25 + 50, (((p_y**2 + p_x**2)**.5)/140)**9);
+        // fill(51);
+        if (flip % offset == 0){
+            rect(x_point * spacer, y_point*spacer, spacer , spacer);           
+        }
+        
+        // text(new_grid[i], x_point * spacer, y_point * spacer + spacer);
+        // if (grid[i].value > 0){
+        //     text(grid[i].value, x_point * spacer, y_point * spacer);
+        //     point( x_point * spacer, y_point * spacer)
+        // }
+    }
+
+
+    flip += 1;
+    
+    for (let i = 0; i < grid.length; i += 1) {
+        grid[i] = new_grid[i];
+    }
+    // console.log(grid)
+}
+
+function mouseClicked(){
+    for (var i = 0; i < grid.length; i++) {
+        grid[i] = Math.random();
+        new_grid[i] = grid[i];
+    }
+}

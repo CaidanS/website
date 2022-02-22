@@ -2,6 +2,7 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <head>
 	<script async src="https://www.googletagmanager.com/gtag/js?id=G-H9HX4X0R3T"></script>
+	
 	<script>
 	window.dataLayer = window.dataLayer || [];
 	function gtag(){dataLayer.push(arguments);}
@@ -11,13 +12,15 @@
 	<link rel="preconnect" href="https://fonts.gstatic.com">
 	<link href="https://fonts.googleapis.com/css2?family=Oi&family=Pirata+One&family=Space+Grotesk:wght@500&display=swap" rel="stylesheet">
 
+	<script language="javascript" type="text/javascript" src="/assets/p5.js"></script>
+	<!-- <script language="javascript" type="text/javascript" src="main.js"></script> -->
 
 	<link rel="stylesheet" type="text/css" href="/main.css">
 	<title>Caidan Speth-McCrary</title>
 	<meta name="viewport" content="width=device-width">
 	<meta name="description" content="Caidan Speth-McCrary is a mechanical and manufacturing engineering student at Oregon State University">
 </head>
-<body>
+<body style="margin: 0; padding: 0;">
 	<div id="main_content">
 		<div id="header">
 			<h1 class='title'> 
@@ -102,4 +105,10 @@
 			</div>
 		</div>
 	</div>
+	<div id="canvas_container" style="position: absolute; right: 0; bottom: -5px; z-index: -1;"></div>
+	<script>
+		if(window.matchMedia("(min-width: 885px)").matches){
+ 			document.write('<script type="text/javascript" src="/main.js"><\/script>');
+		}
+	</script>
 </body>
