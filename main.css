@@ -88,20 +88,20 @@ a {
     margin-bottom: 40px;
 }
 
-@-webkit-keyframes Animation {
-    0%{background-position:10% 0%}
-    50%{background-position:91% 100%}
-    100%{background-position:10% 0%}
+/* @-webkit-keyframes Animation {
+    0%{background-position:0.6rem 0rem}
+    50%{background-position:5.4rem 6rem}
+    100%{background-position:.6rem 0rem}
 }
 @-moz-keyframes Animation {
     0%{background-position:10% 0%}
     50%{background-position:91% 100%}
     100%{background-position:10% 0%}
-}
+} */
 @keyframes Animation { 
-    0%{background-position:10% 0%}
-    50%{background-position:91% 100%}
-    100%{background-position:10% 0%}
+    0%{background-position:0rem 0rem}
+    50%{background-position:-3rem -6rem}
+    100%{background-position:0rem 0rem  }
 }
 
 @keyframes title-colors {
@@ -158,17 +158,26 @@ a:active {
 }
 
 .title-word.Caidan {
-    background: linear-gradient(to right bottom, #fdca40 0%, #df2935 50%, #3772ff 100%);
-	-webkit-background-clip: text;
+    background: linear-gradient(135deg, #fdca40 0rem, #df2935 6rem, #3772ff 12rem);
+    -webkit-background-clip: text;
+    background-clip: clip;
 	-webkit-text-fill-color: transparent;
-    background-size: 200% 200%;
+    background-size: 15rem 15rem;
 
     -webkit-animation: Animation 50s ease infinite;
     -moz-animation: Animation 50s ease infinite;
     animation: Animation 50s ease infinite;
 
-    color: #3772ff;
+    /* color: #3772ff; */
     animation-delay: -3.5s;
+}
+
+.twrap {
+    background: inherit;
+    -webkit-background-clip: text;
+    background-clip: clip;
+	-webkit-text-fill-color: transparent;
+    /* color: #3772ff; */
 }
 
 .title-word.Blog {
@@ -289,6 +298,8 @@ hr {
   
   .title-word{
     vertical-align: bottom;
+    -webkit-background-clip: text;
+	/* -webkit-text-fill-color: transparent; */
   }
   
   .thidden {
