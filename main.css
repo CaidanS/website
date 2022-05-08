@@ -15,8 +15,8 @@
     --titlecol: lightgray;
     --lowcol: darkgray;
     --backcol: black;
-    --accentbrightcol: darkcyan;
-    --accentdarkcol: indigo;
+    --accentbrightcol: magenta;
+    --accentdarkcol: blue;
     --selectforecol: white;
 }
 
@@ -144,7 +144,7 @@ a:active {
 }
 
 .title-word.Caidan {
-    background: linear-gradient(135deg, var(--titlecol) 0rem, var(--accentbrightcol) 6rem, var(--accentdarkcol) 12rem);
+    background: linear-gradient(135deg,  var(--accentbrightcol) 0rem, var(--accentdarkcol) 12rem);
     -webkit-background-clip: text;
     background-clip: clip;
 	-webkit-text-fill-color: transparent;
