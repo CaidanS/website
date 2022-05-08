@@ -12,7 +12,6 @@ const mouse_weight = 0.0;
 
 const neighbor_offset_for_activation = (neighbor_points.length + mouse_weight)/2
 
-
 let grid = new Array(grid_dims.rows * grid_dims.cols).fill(0)
 
 let new_grid = new Array(grid_dims.rows * grid_dims.cols).fill(0)
@@ -35,9 +34,9 @@ function setup() {
 }
 
 function draw() {
-    if (flip % offset == 0){
-        background(255); 
-    }
+    // if (flip % offset == 0){
+    //     background(0); 
+    // }
 
     for (let i = 0; i < grid.length; i += 1) {
         // new_grid[i].value = 0;
