@@ -9,13 +9,29 @@
     scrollbar-width: none;
 }
 
+:root {
+    --outerpad: 40px;
+    --primarycol: gray;
+    --titlecol: lightgray;
+    --lowcol: darkgray;
+    --backcol: black;
+    --accentbrightcol: darkcyan;
+    --accentdarkcol: indigo;
+    --selectforecol: white;
+}
+
+::selection {
+    background-color: var(--accentbrightcol);
+    color: var(--selectforecol)
+}
+
 body {
-    color: gray;
-    background-color: black;
+    color: var(--primarycol);
+    background-color: var(--backcol);
 }
 
 h2, h3 {
-    color: lightgray;
+    color: var(--titlecol);
     margin-bottom: 0.25rem;
 }
 
@@ -25,7 +41,6 @@ h2, h3 {
 
 #main_content {
     font-size: 1rem;
-    margin: 15px;
     display: grid;
     grid-template-columns: 100%;
     grid-template-areas:
@@ -50,7 +65,7 @@ h2, h3 {
 }
 
 .title {
-    color: lightgray;
+    color: var(--titlecol);
 }
 
 @media (min-width: 885px) {
@@ -58,8 +73,8 @@ h2, h3 {
         font-size: 4rem;
     }
     #main_content {
-        margin: 50px;
-        margin-top: 30px;
+        margin: var(--outerpad);
+        margin-top: calc(var(--outerpad)/2);
         grid-template-columns: 100%;
         grid-template-areas:
             "header header"
@@ -86,7 +101,7 @@ h2, h3 {
 
 #header {
     grid-area: header;
-    margin-bottom: 40px;
+    margin-bottom: calc(var(--outerpad)/2);
 }
 
 /* @-webkit-keyframes Animation {
@@ -109,22 +124,26 @@ h2, h3 {
     /* font-family: 'Oi', cursive; */
     /*text-align: center;*/
     font-size: 3rem;
-    color: lightgray;
+    color: var(--titlecol);
     text-decoration: none;
 }
 
 a:link,
 a:visited {
-    color: darkgray;
+    color: var(--lowcol);
     text-decoration: none;
 }
 
+a:hover {
+    color: var(--accentbrightcol)
+}
+
 a:active {
-    color: lightgray;
+    color: var(--titlecol);
 }
 
 .title-word.Caidan {
-    background: linear-gradient(135deg, #fdca40 0rem, #df2935 6rem, #3772ff 12rem);
+    background: linear-gradient(135deg, var(--titlecol) 0rem, var(--accentbrightcol) 6rem, var(--accentdarkcol) 12rem);
     -webkit-background-clip: text;
     background-clip: clip;
 	-webkit-text-fill-color: transparent;
@@ -171,15 +190,6 @@ h2 {
     margin: 15px 0px 15px 0px;
 }
 
-.project_thumbnail {
-    min-height: 200px;
-    border-style: solid;
-    border-color: black;
-    border-width: 5px;
-    border-radius: 10px;
-    background-color: salmon;
-}
-
 .project_thumbnail h3 {
     text-align: center;
     padding-top: 25%
@@ -214,8 +224,8 @@ h2 {
 hr {
     border: 0;
     height: 0;
-    border-top: 1px solid lightgray;
-    border-bottom: 1px solid lightgray;
+    border-top: 1px solid var(--titlecol);
+    border-bottom: 1px solid var(--titlecol);
 
 }
 
@@ -240,7 +250,7 @@ hr {
   .title-word{
     vertical-align: bottom;
     -webkit-background-clip: text;
-    color: lightgray;
+    color: var(--titlecol);
 	/* -webkit-text-fill-color: transparent; */
   }
   
