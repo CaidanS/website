@@ -111,7 +111,7 @@ function Person(connections){
                     this.connect(t);
                 }
             } 
-            if(document.getElementById('max').checked){
+            if(document.getElementById('_max').checked){
                 if(connections[t] == Math.max(...this.connections)){
                     stroke(200);
                     this.connect(t);
@@ -123,7 +123,7 @@ function Person(connections){
                     this.connect(t);
                 }
             } 
-            if(document.getElementById('min').checked){
+            if(document.getElementById('_min').checked){
                 if(connections[t] == Math.min(...this.connections)){
                     stroke(50);
                     this.connect(t);
