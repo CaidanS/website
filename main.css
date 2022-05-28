@@ -31,13 +31,13 @@
 
 :root {
     --outerpad: 40px;
-    /* --primarycol: gray;
+    --primarycol: gray;
     --titlecol: lightgray;
     --lowcol: darkgray;
     --backcol: black;
     --accentbrightcol: hotpink;
     --accentdarkcol: RoyalBlue;
-    --selectforecol: white; */
+    --selectforecol: white;
 }
 
 ::selection {
