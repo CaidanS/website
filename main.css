@@ -9,15 +9,35 @@
     scrollbar-width: none;
 }
 
+#theme_toggle {
+    position:fixed;
+	/* width:60px; */
+	/* height:60px; */
+	bottom: var( --outerpad);
+	right:var( --outerpad);
+    /* padding: 0rem; */
+    background-color: var(--backcol);
+    color: var(--titlecol);
+    border: 0.15rem solid var(--titlecol);
+    border-radius: 0.25rem;
+    transition: color .5s, background-color .5s;
+}
+
+#theme_toggle:hover {
+    background-color: var(--titlecol);
+    color: var(--backcol);
+    /* border: 0.15rem solid var(--backcol); */
+}
+
 :root {
     --outerpad: 40px;
-    --primarycol: gray;
+    /* --primarycol: gray;
     --titlecol: lightgray;
     --lowcol: darkgray;
     --backcol: black;
     --accentbrightcol: hotpink;
     --accentdarkcol: RoyalBlue;
-    --selectforecol: white;
+    --selectforecol: white; */
 }
 
 ::selection {
